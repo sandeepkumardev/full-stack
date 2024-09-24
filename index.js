@@ -1,5 +1,5 @@
 console.log("hello user");
 
-console.log("new changes");
+console.log("new");
 
 console.log("object");
