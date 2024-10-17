@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Cards with map()</title>
+    <style>
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .card {
+        background-color: #f4f4f4;
+        padding: 20px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+      .card h3 {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      .card p {
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Employee Information</h1>
+    <div class="card-container" id="employeeCards"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
