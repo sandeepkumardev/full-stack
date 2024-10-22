@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Username</title>
+  </head>
+  <body>
+    <h2>Enter a Username</h2>
+    <form id="usernameForm">
+      <input type="text" id="username" placeholder="Enter username" required />
+      <button type="submit">Check</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+      // Simulating existing usernames
+      const existingUsernames = ["johnDoe", "alice123", "jane_smith"];
+
+      // Handling form submission
+      document
+        .getElementById("usernameForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form from submitting normally
+          const username = document.getElementById("username").value.trim();
+
+          // Check if username exists
+          if (existingUsernames.includes(username)) {
+            document.getElementById(
+              "result"
+            ).innerText = `Username "${username}" is already taken.`;
+          } else {
+            document.getElementById(
+              "result"
+            ).innerText = `Username "${username}" is available.`;
+          }
+        });
+    </script>
+  </body>
+</html>
