@@ -6,15 +6,10 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <div>
-        <h1>yess</h1>
-      </div>
-    </div>
-    <h1>HELLO WORLD from html</h1>
+  
     <div id="root"></div>
   </body>
-  <script src="gmail.js"></script>
+  <!-- <script src="index.js"></script> -->
   <script
     crossorigin
     src="https://unpkg.com/react@18/umd/react.development.js"
@@ -24,9 +19,21 @@
     src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
   ></script>
   <script>
-    const heading = React.creatElement("h1", null, "hello from react");
-    const reactRoot = ReactDOM.createRoot(document.getElementById("reactRoot"));
-    const reactDIV = React.creatElement("div", null, heading);
-    reactRoot.render(reactDiv);
+    // const heading = React.creatElement("h1", null, "hello from react");
+    // const reactRoot = ReactDOM.createRoot(document.getElementById("reactRoot"));
+    // const reactDIV = React.creatElement("div", null, heading);
+    // const h1 = React.createEelement("h1" , null, "hello 1")
+    // const h2 = React.createEelement("h1" , null, "hello 1")
+    // // const childdiv = React.createEelement("div", { id: "child"}, [h1,h2]);
+    // const parentdiv = React.createEelement("div", { id: "parent"}, childdiv);
+    //  const h1 = React.createElement("h1", null, "jalal")
+    // const p = React.createElement("p", null, "jalal 2")
+    // const nav = React.createElement("nav",null, h1);
+    // const container = React.createElement("container", null,p)
+    // const main = React.createElement("main", null, [nav,container])
+    const img = React.createElement("img", {src:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCBwaSg4JS-T1vtsEb8e7AE_bXJfuW7Bv6dw&s"})
+    const parentdiv = React.createElement("div",null, img )
+     const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+    reactRoot.render(parentdiv);
   </script>
 </html>
