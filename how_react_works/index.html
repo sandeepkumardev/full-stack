@@ -6,20 +6,34 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Hello from HTML</h1>
-    <div id="root"></div>
+    <!-- <h1>Hello from HTML</h1>
+    <div id="root"></div> -->
     <div id="reactRoot"></div>
   </body>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="index.js"></script>
+  <!-- <script src="index.js"></script> -->
 
   <script>
-    const heading = React.createElement("h1", null, "Hello from React");
-    const newDiv = React.createElement("div", null, heading);
-    const reactDiv = React.createElement("div", null, [newDiv, heading]);
+    // const heading = React.createElement("h1", null, "Hello from React");
+    // const newDiv = React.createElement("div", null, heading);
+    // const reactDiv = React.createElement("div", null, [newDiv, heading]);
+
+    // const h1 = React.createElement("h1", null, "Hello 1");
+    // const h2 = React.createElement("h2", null, "Hello 2");
+
+    // const childDiv = React.createElement("div", { id: "child" }, [h1, h2]);
+    // const parentDiv = React.createElement("div", { id: "parent" }, childDiv);
+
+    const image = React.createElement("img", {
+      src: "https://reactjs.org/logo-og.png",
+      width: 500,
+      height: 300,
+      alt: "React Logo",
+    });
+    const parentDiv = React.createElement("div", { id: "parent" }, image);
 
     const reactRoot = ReactDOM.createRoot(document.getElementById("reactRoot"));
-    reactRoot.render(reactDiv);
+    reactRoot.render(parentDiv);
   </script>
 </html>
