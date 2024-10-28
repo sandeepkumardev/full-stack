@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid blue;
+    padding: 10px;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between; 
+    border: 2px solid green;
+    padding: 10px;
+}
+.card {
+    padding: 5px;
+    border: 1px solid violet;
+    /* justify-content: space-between; */
+    text-align: center;
+    
+    
+    width: 100px;
+    height: 100px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red;
+    padding: 10px;
+}
+#in {
+    border: 2px solid gold;
+}
