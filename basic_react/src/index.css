@@ -1,0 +1,29 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 1px solod red;
+    padding: 10px;
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 1px solod black;
+    padding: 10px;
+
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 1px solod greenyellow;
+    padding: 10px;
+}
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 1px solod red;
+    padding: 10px;
+}
