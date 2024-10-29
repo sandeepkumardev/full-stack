@@ -8,15 +8,15 @@ import App from "./App";
 
 
 // const div =  React.createElement("div", null, [h1Ele, pEle])
-const Ele =()=>{
-    return(
-    <div>
-      <h1>
-        Hello this is React
-      </h1>
-    </div>
-    );
-};
+// const Ele =()=>{
+//     return(
+//     <div>
+//       <h1>
+//         Hello this is React
+//       </h1>
+//     </div>
+//     );
+// };
 //components using react
 //jsx>babel>create.element>VirtualDom
 
