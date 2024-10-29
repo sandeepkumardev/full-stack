@@ -17,3 +17,25 @@ import App into index.js file and render it in root variable.
 
 import App.css file in App.js > import "./App.css"
 create a components directory in src folder.
+
+// git commands
+in root path > git add .
+git commit -m ""
+git push origin <branch_name>
+
+// in new git project
+git init
+
+> create a new repo in github
+> git remote add origin <cloud repo link>
+
+// create branch
+git branch -> list all branch
+git checkout -b "new branch name"
+git branch
+
+// move around branch
+git checkout <branch name>
+
+// check repo remote
+git remote show origin
