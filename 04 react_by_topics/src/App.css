@@ -1,0 +1,11 @@
+.in button{
+    padding: 10px 20px;
+    margin: 0px 10px ;
+    color: blueviolet;
+    background: gold;
+    font-size: 15px;
+}
+.in h1 {
+    padding-left: 10px;
+    color: blue;
+}
