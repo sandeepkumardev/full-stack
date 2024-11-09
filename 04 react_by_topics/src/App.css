@@ -9,3 +9,21 @@
     padding-left: 10px;
     color: blue;
 }
+.Header {
+    display: flex;
+    justify-content: space-between;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+.card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.cards button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}

@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 const Counter=()=>{
-const [count,setCount]= useState(0);
+const [count,setCount]= useState(1);
 
 function increment() {
     // if (count>=0){

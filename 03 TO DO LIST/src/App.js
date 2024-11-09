@@ -1,17 +1,30 @@
 import "./index.css";
+import {useState} from "react";
 
 const App=()=>{
+
+    const[input,setInput]= useState ("");
+    const[todos,setTodos]= useState([]);
+     const handleInputChange=(event)=>{
+        setInput(event.target.value);
+     }
+    const handleAdd=(e)=>{
+      e.preventDefault()
+      setTodos([input,...todos]);
+      setInput("");
+    };
     return(
      <div className="Box">
         <div className="Head">
-            <input type="text"></input>
-            <button id="but">ADD</button>
+         <form onSubmit={handleAdd}> 
+            <input type="text" value={input} onChange={handleInputChange}></input>
+            <button type="submit" id="but">ADD</button>
+            </form>
         </div>
         <ul>
-           <li>Task 1</li>
-           <li>Task 2</li>
-           <li>Task 3</li>
-           <li>Task 4</li>
+           {todos.map((item,index)=>(
+            <li key={index}>{item}</li>
+           ))}
         </ul>
      </div>
     );
