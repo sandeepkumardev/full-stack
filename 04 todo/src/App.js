@@ -16,8 +16,12 @@ function App() {
     setInput("");
   };
 
+  const handleDelete = (index) => {
+    setTodos(todos.filter((_, i) => i !== index));
+  };
+
   return (
-    <div>
+    <div className="App">
       <form onSubmit={handleAdd}>
         <input type="text" value={input} onChange={handleInputChange} />
         <button type="submit">Add</button>
@@ -25,7 +29,9 @@ function App() {
 
       <ul>
         {todos.map((item, index) => (
-          <li key={index}>{item}</li>
+          <div key={index} className="todo">
+            <li>{item}</li> <button onClick={() => handleDelete(index)}>Delete</button>
+          </div>
         ))}
       </ul>
     </div>
