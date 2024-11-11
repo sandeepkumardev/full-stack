@@ -1,8 +1,13 @@
 .App {
-  width: 300px;
+  width: 350px;
 }
 
 .todo {
   display: flex;
   justify-content: space-between;
+}
+
+.edit_input {
+  height: 15px;
+  width: 150px;
 }
