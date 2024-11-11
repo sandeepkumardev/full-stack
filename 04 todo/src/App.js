@@ -12,7 +12,9 @@ function App() {
   const handleAdd = (e) => {
     e.preventDefault();
 
-    setTodos([input, ...todos]);
+    if (!input || !input.trim()) return;
+
+    setTodos([input.trim(), ...todos]);
     setInput("");
   };
 
