@@ -30,3 +30,20 @@
     border : 1px solid gray;
     padding : 10px;
 }
+
+
+.App {
+    width : 300px;
+}
+
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputbox
+{
+    height: 15px;
+    width: 200px;
+}
