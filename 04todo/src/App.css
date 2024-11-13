@@ -1,0 +1,11 @@
+.App {
+    width: 300px;
+}
+
+
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    
+}
