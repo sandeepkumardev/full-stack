@@ -1,6 +1,7 @@
 import { useState } from "react";
+import "./App.css"
 
-const ToDo = () => {
+const App = () => {
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
   const [showInputIndex, setShowInputIndex] = useState(null);
@@ -75,4 +76,4 @@ const ToDo = () => {
   );
 };
 
-export default ToDo;
+export default App;
