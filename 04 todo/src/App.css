@@ -2,12 +2,51 @@
   width: 350px;
 }
 
-.todo {
+.todos_list {
+  list-style-type: none;
+}
+
+.todo_box {
   display: flex;
   justify-content: space-between;
+}
+
+.todo_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .edit_input {
   height: 15px;
   width: 150px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delete_icon {
+  color: red;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.edit_icon {
+  color: blue;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.check_icon {
+  color: green;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
 }

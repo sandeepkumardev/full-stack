@@ -1,5 +1,8 @@
 import "./App.css";
 import { useState } from "react";
+import { MdOutlineDelete } from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
+import { FaCheckDouble } from "react-icons/fa6";
 
 function App() {
   const [input, setInput] = useState("");
@@ -7,8 +10,8 @@ function App() {
   const [showInputIndex, setShowInputIndex] = useState(null);
   const [editInput, setEditInput] = useState("");
 
-  const handleShowInput = (index) => {
-    setShowInputIndex(index);
+  const handleShowInput = (todoId) => {
+    setShowInputIndex(todoId);
   };
 
   const handleInputChange = (event) => {
@@ -20,18 +23,22 @@ function App() {
 
     if (!input || !input.trim()) return;
 
-    setTodos([input.trim(), ...todos]);
+    setTodos([{ id: Date.now(), todo: input.trim(), isCompleted: false }, ...todos]);
     setInput("");
   };
 
-  const handleDelete = (index) => {
-    setTodos(todos.filter((_, i) => i !== index));
+  const handleDelete = (todoId) => {
+    setTodos(todos.filter((item) => item.id !== todoId));
   };
 
-  const handleTodoUpdate = (index) => {
-    setTodos(todos.map((item, i) => (index === i ? editInput : item)));
+  const handleTodoUpdate = (todoId) => {
+    setTodos(todos.map((item) => (todoId === item.id ? { ...item, todo: editInput } : item)));
     setShowInputIndex(null);
     setEditInput("");
+  };
+
+  const handleTodoChecked = (todoId) => {
+    setTodos(todos.map((item) => (todoId === item.id ? { ...item, isCompleted: !item.isCompleted } : item)));
   };
 
   return (
@@ -41,38 +48,65 @@ function App() {
         <button type="submit">Add</button>
       </form>
 
-      <ul>
-        {todos.map((item, index) => (
-          <div key={index} className="todo">
-            {showInputIndex === index ? (
-              <input
-                value={editInput}
-                onChange={(event) => setEditInput(event.target.value)}
-                className="edit_input"
-                type="text"
-              />
-            ) : (
-              <li>{item}</li>
-            )}
-
-            <div>
-              {showInputIndex === index ? (
-                <button onClick={() => handleTodoUpdate(index)}>Update</button>
+      <ul className="todos_list">
+        {todos
+          .filter((item) => !item.isCompleted)
+          .map((item) => (
+            <div key={item.id} className="todo_box">
+              {showInputIndex === item.id ? (
+                <input
+                  value={editInput}
+                  onChange={(event) => setEditInput(event.target.value)}
+                  className="edit_input"
+                  type="text"
+                />
               ) : (
-                <button
-                  onClick={() => {
-                    handleShowInput(index);
-                    setEditInput(item);
-                  }}
-                >
-                  Edit
-                </button>
+                <div className="todo_item">
+                  <input type="checkbox" checked={item.isCompleted} onChange={() => handleTodoChecked(item.id)} />
+                  <li className={`${item.isCompleted ? "completed" : ""}`}>{item.todo}</li>
+                </div>
               )}
 
-              <button onClick={() => handleDelete(index)}>Delete</button>
+              <div className="actions">
+                {showInputIndex === item.id ? (
+                  <FaCheckDouble className="check_icon" onClick={() => handleTodoUpdate(item.id)} />
+                ) : (
+                  <FaEdit
+                    className="edit_icon"
+                    onClick={() => {
+                      handleShowInput(item.id);
+                      setEditInput(item.todo);
+                    }}
+                  />
+                )}
+
+                <MdOutlineDelete className="delete_icon" onClick={() => handleDelete(item.id)} />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+      </ul>
+      {todos.some((item) => item.isCompleted) && (
+        <div>
+          <hr />
+          <p>Completed tasks</p>
+        </div>
+      )}
+
+      <ul className="todos_list">
+        {todos
+          .filter((item) => item.isCompleted)
+          .map((item) => (
+            <div key={item.id} className="todo_box">
+              <div className="todo_item">
+                <input type="checkbox" checked={item.isCompleted} onChange={() => handleTodoChecked(item.id)} />
+                <li className={`${item.isCompleted ? "completed" : ""}`}>{item.todo}</li>
+              </div>
+
+              <div className="actions">
+                <MdOutlineDelete className="delete_icon" onClick={() => handleDelete(item.id)} />
+              </div>
+            </div>
+          ))}
       </ul>
     </div>
   );
