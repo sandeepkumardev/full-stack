@@ -1,23 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./App.css";
 const App = () => {
-  const [name ,setName] =React.useState("");
-  const [email ,setEmail] =React.useState("");
-  const [password ,setPassword] =React.useState("");
 
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    const userData ={ name, email, password};
-  console.log(userData);
+    console.log({
+      name:nameRef.current.value,
+      email:emailRef.current.value,
+      password:passwordRef.current.value,
+    })
+    
   };
 
   
   return (
     <div>
       <form onSubmit={handleSubmit} className="usr-form">
-        <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input type="text" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input type="text" placeholder="Name" ref={nameRef} />
+        <input type="email" placeholder="Email"  ref={emailRef}/>
+        <input type="text" placeholder="Password"  ref={passwordRef}/>
         <button type="submit" >Submit</button>
       </form>
     </div>
