@@ -1,26 +1,35 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./App.css";
 const App = () => {
+  const [formData ,setFormData] = useState({
+    name : "",
+    email : "",
+    password : ""
+  });
 
  
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData= new FormData(e.target);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const password = formData.get("password");
-   
-    console.log({name , email , password});
+    console.log(formData);
   };
+  
+  const handleChange = (e) => {
+    const {name ,value} = e.target;
+    
+    setFormData((prev) => ({
+      ...prev,
+      [name] : value,
+    }));
 
+  };
   
   return (
     <div>
       <form onSubmit={handleSubmit} className="usr-form">
-        <input type="text" placeholder="Name"  name="name"/>
-        <input type="email" placeholder="Email" name="email" />
-        <input type="text" placeholder="Password" name="password"/>
+        <input type="text" placeholder="Name"  name="name" value={formData.name} onChange={handleChange}/>
+        <input type="email" placeholder="Email" name="email"  value={formData.email} onChange={handleChange}/>
+        <input type="text" placeholder="Password" name="password" value={formData.password} onChange={handleChange}/>
         <button type="submit" >Submit</button>
       </form>
     </div>
