@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Sevillana&display=swap");
+
+/* #heading1 {
+  color: red;
+}
+
+.heading2 {
+  color: blue;
+}
+
+h1 {
+  color: green;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* .box {
+  background-color: green;
+  border: 10px solid red;
+  padding: 10px;
+  width: 100%;
+} */
+
+/* .fonts {
+  background-color: red;
+}
+h1 {
+  font-weight: lighter;
+  font-size: 1.6rem;
+
+  text-align: center;
+  text-decoration: line-through;
+} */
+
+/* .layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.layout span {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+} */
+
+.pos {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+
+  position: relative;
+}
+
+.box {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+}
