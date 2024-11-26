@@ -1,13 +1,15 @@
 import "./Todo.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { MdOutlineDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { FaCheckDouble } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { TodoContext } from "../store/todoContext";
 
 function Todo() {
+  const { todos, setTodos } = useContext(TodoContext);
   const [input, setInput] = useState("");
-  const [todos, setTodos] = useState([]);
+  // const [todos, setTodos] = useState([]);
   const [showInputIndex, setShowInputIndex] = useState(null);
   const [editInput, setEditInput] = useState("");
 

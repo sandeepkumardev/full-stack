@@ -4,10 +4,9 @@ import React from "react";
 export const TodoContext = React.createContext(null);
 
 const TodoProvider = ({ children }) => {
-  const name = "sandeep";
-  const email = "QxK9F@example.com";
+  const [todos, setTodos] = React.useState([]);
 
-  return <TodoContext.Provider value={{ name, email }}>{children}</TodoContext.Provider>;
+  return <TodoContext.Provider value={{ todos, setTodos }}>{children}</TodoContext.Provider>;
 };
 
 export default TodoProvider;
