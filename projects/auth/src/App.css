@@ -75,3 +75,31 @@
   color: white;
   cursor: pointer;
 }
+
+/* not found  */
+.not_found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.not_found h1 {
+  font-size: 50px;
+}
+
+.not_found p {
+  font-size: 20px;
+}
+
+.not_found a {
+  text-decoration: none;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 20px;
+}
