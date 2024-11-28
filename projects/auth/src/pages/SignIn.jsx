@@ -9,7 +9,7 @@ const SignIn = () => {
     // sign in logic
     // save user info
 
-    navigate("/");
+    navigate("/dashboard");
   };
   return (
     <div className="auth_container">
