@@ -1,4 +1,10 @@
 /* signin css  */
+.error {
+  font-size: 10px;
+  color: red;
+  margin-top: 5px;
+}
+
 .auth_container {
   display: flex;
   justify-content: center;
