@@ -1,0 +1,57 @@
+/* signin css  */
+.auth_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.input_control {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input_control input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.submit_btn {
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 5px;
+  background-color: rgb(92, 243, 92);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit_btn:hover {
+  background-color: rgb(7, 201, 7);
+}
+
+.signup_link {
+  margin-top: 10px;
+  text-align: center;
+  color: gray;
+  font-size: 12px;
+}
+
+.signup_link a {
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
+}
