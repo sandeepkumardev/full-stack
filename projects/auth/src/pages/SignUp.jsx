@@ -33,8 +33,6 @@ const SignUp = () => {
       return;
     }
 
-    console.log(users);
-
     // check if user exists
     const isUserExist = users.some((u) => u.email === user.email);
     if (isUserExist) {
@@ -43,7 +41,7 @@ const SignUp = () => {
     }
 
     setUsers((prev) => [...prev, { ...user }]);
-    navigate("/dashboard");
+    navigate("/sign-in");
   };
   return (
     <div className="auth_container">
