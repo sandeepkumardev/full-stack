@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    border: 1px solid gray;
+    justify-content: space-between;
+}
+
+.header-links {
+    display: flex;
+    gap: 10px;
+}
+
+.header-links a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+.header-links a:hover {
+    text-decoration: underline;
+    color: blue;
+}

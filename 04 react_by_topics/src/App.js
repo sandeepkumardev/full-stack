@@ -7,7 +7,7 @@ function App() {
     <div>
       {/* <Counter /> */}
       {/* <Props /> */}
-      <Map />
+      {/* <Map /> */}
     </div>
   );
 }

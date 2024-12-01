@@ -44,6 +44,31 @@
 
 .inputbox
 {
+    
     height: 15px;
     width: 200px;
 }
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check_icon {
+    color: green;
+    cursor: pointer;
+    font-size: 20px;
+}
+.edit_icon {
+    color: blue;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+.delete_icon {
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+}
+

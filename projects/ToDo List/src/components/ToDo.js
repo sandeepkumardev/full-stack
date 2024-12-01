@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { MdOutlineDeleteOutline } from "react-icons/md";
+import { FaRegEdit, FaCheckDouble } from "react-icons/fa";
 
 const ToDo = () => {
   const [input, setInput] = useState("");
@@ -52,21 +54,26 @@ const ToDo = () => {
               <li>{item}</li>
             )}
 
-            <div>
+            <div className="actions">
               {showInputIndex === index ? (
-                <button onClick={() => handleInputUpdate(index)}>Update</button>
+                <FaCheckDouble
+                  className="check_icon"
+                  onClick={() => handleInputUpdate(index)}
+                />
               ) : (
-                <button
+                <FaRegEdit
+                  className="edit_icon"
                   onClick={() => {
                     handleShowInput(index);
                     setEditInput(item);
                   }}
-                >
-                  Edit
-                </button>
+                />
               )}
 
-              <button onClick={() => handleDelete(index)}>Delete</button>
+              <MdOutlineDeleteOutline
+                className="delete_icon"
+                onClick={() => handleDelete(index)}
+              />
             </div>
           </div>
         ))}
