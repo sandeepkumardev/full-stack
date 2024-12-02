@@ -10,8 +10,10 @@ const Home = () => {
 
       Home Page 
       <h1>Total Todos: {todos.length}</h1>
-      <h3>Pending Todos: </h3>
-      <h6>Completed Todos: </h6><Link to= "/todopage" >TodoApp</Link>
+      <h3>Pending Todos:{todos.filter(todo=> !todo.isCompleted).length} </h3>
+      <h6>Completed Todos:{todos.filter(todo=> todo.isCompleted).length} </h6>
+      
+      <Link to= "/todopage" >TodoApp</Link>
     </div>
   )
 }
