@@ -1,42 +1,57 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+.todo {
+    width: 100%;
+    display: flex;
+    justify-content: center ;
+    flex-direction: column;
+    
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  
+  .todos_list {
+    list-style-type: none;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  .todo_box {
+    display: flex;
+    justify-content: space-between;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+  
+  .todo_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .edit_input {
+    height: 15px;
+    width: 150px;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .delete_icon {
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .edit_icon {
+    color: blue;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .check_icon {
+    color: green;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: gray;
+  }
